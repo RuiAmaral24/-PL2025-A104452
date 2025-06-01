@@ -1,0 +1,34 @@
+pushi 0
+storeg 0
+pushi 0
+storeg 1
+start
+pushi 0
+storeg 1
+pushs "Introduza 5 números inteiros:"
+writes
+writeln
+pushi 5
+storeg 0
+WHILE0:
+pushg 0
+pushi 0
+sup
+jz ENDWHILE1
+read
+atoi
+pushg 1
+add
+storeg 1
+pushg 0
+pushi 1
+sub
+storeg 0
+jump WHILE0
+ENDWHILE1:
+pushs "A soma dos números é: "
+writes
+pushg 1
+writei
+writeln
+stop

@@ -1,0 +1,62 @@
+pushi 0
+storeg 0
+pushi 0
+storeg 1
+pushi 0
+storeg 2
+pushi 0
+storeg 3
+pushi 0
+storeg 4
+pushi 0
+storeg 5
+start
+read
+atoi
+storeg 0
+pushg 0
+pushi 2
+inf
+jz ELSE0
+pushg 0
+storeg 5
+jump ENDIF1
+ELSE0:
+pushi 0
+storeg 2
+pushi 1
+storeg 3
+pushi 2
+storeg 1
+FOR2:
+pushg 1
+pushg 0
+infeq
+jz ENDFOR3
+pushg 2
+pushg 3
+add
+storeg 4
+pushg 3
+storeg 2
+pushg 4
+storeg 3
+pushg 1
+pushi 1
+add
+storeg 1
+jump FOR2
+ENDFOR3:
+pushg 3
+storeg 5
+ENDIF1:
+pushs "Fib("
+writes
+pushg 0
+writei
+pushs ") = "
+writes
+pushg 5
+writei
+writeln
+stop

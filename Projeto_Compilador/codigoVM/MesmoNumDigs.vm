@@ -1,0 +1,65 @@
+pushi 0
+storeg 0
+pushi 0
+storeg 1
+pushi 0
+storeg 2
+pushi 0
+storeg 3
+start
+read
+atoi
+storeg 0
+read
+atoi
+storeg 1
+pushi 0
+storeg 2
+WHILE0:
+pushg 0
+pushi 0
+equal
+ not
+jz ENDWHILE1
+pushg 2
+pushi 1
+add
+storeg 2
+pushg 0
+pushi 10
+div
+storeg 0
+jump WHILE0
+ENDWHILE1:
+pushi 0
+storeg 3
+WHILE2:
+pushg 1
+pushi 0
+equal
+ not
+jz ENDWHILE3
+pushg 3
+pushi 1
+add
+storeg 3
+pushg 1
+pushi 10
+div
+storeg 1
+jump WHILE2
+ENDWHILE3:
+pushg 2
+pushg 3
+equal
+jz ELSE4
+pushs "Têm o mesmo número de dígitos."
+writes
+writeln
+jump ENDIF5
+ELSE4:
+pushs "Têm número de dígitos diferente."
+writes
+writeln
+ENDIF5:
+stop

@@ -1,0 +1,52 @@
+pushi 0
+storeg 0
+pushi 0
+storeg 1
+pushi 0
+storeg 2
+pushi 0
+storeg 3
+start
+read
+atoi
+storeg 0
+pushi 0
+storeg 3
+pushi 0
+storeg 2
+WHILE0:
+pushg 2
+pushg 0
+infeq
+jz ENDWHILE1
+pushg 2
+pushi 2
+mod
+pushi 0
+equal
+jz ELSE2
+pushg 3
+pushg 2
+add
+storeg 3
+jump ENDIF3
+ELSE2:
+ENDIF3:
+pushg 2
+pushi 1
+add
+storeg 2
+jump WHILE0
+ENDWHILE1:
+pushg 3
+storeg 1
+pushs "Soma dos pares até "
+writes
+pushg 0
+writei
+pushs ": "
+writes
+pushg 1
+writei
+writeln
+stop
